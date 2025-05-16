@@ -23,11 +23,6 @@ const CustomHeader = () => {
 
   return (
     <View style={styles.container}>
-      <StatusBar
-        translucent
-        backgroundColor="transparent"
-        barStyle="light-content"
-      />
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.headerContainer}>
           <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
@@ -47,13 +42,13 @@ const CustomHeader = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLOR.PRIMARY,
+    // backgroundColor: COLOR.PRIMARY,
   },
   safeArea: {
     backgroundColor: COLOR.PRIMARY,
   },
   headerContainer: {
-    height: Matrics.ms(75),
+    height: Platform.OS === 'android' ? Matrics.ms(75) : Matrics.s(35),
     width: '100%',
     flexDirection: 'row',
     alignItems: 'flex-center',
