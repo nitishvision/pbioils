@@ -1,0 +1,97 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Jost-BlackItalic.ttf",
+      "sha1": "e52d329fd5578d1045538b3a661d66d996faff50"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Bold.ttf",
+      "sha1": "03ff01bdda0a0fb7c9efb436ff846a254ae7691e"
+    },
+    {
+      "path": "src/assets/fonts/Jost-BoldItalic.ttf",
+      "sha1": "0e2e80977fcde87c3dbb6868018dedd90bd20e49"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraBold.ttf",
+      "sha1": "6cec05a0f036209249b59d10544b372b3e055969"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraBoldItalic.ttf",
+      "sha1": "e1b863a9bde84220a80a7d37107508080530f34c"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraLight.ttf",
+      "sha1": "34f24476b8b82d168cefaa7e3e6262019c41876e"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraLightItalic.ttf",
+      "sha1": "d57c0cb67eea1a24d94778075d3c522df4f8fa0b"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Italic-VariableFont_wght.ttf",
+      "sha1": "3beb066dcae084822c85a6a5bd5df98b462f9f79"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Italic.ttf",
+      "sha1": "9847f60567d3149446862bf38ed941e964cac9a7"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Light.ttf",
+      "sha1": "5d793e66ad9ec63f95c9dc3f9b77a1f98f2387b4"
+    },
+    {
+      "path": "src/assets/fonts/Jost-LightItalic.ttf",
+      "sha1": "bdfdf79b8075f55608feef7fb0af84ad68a6c161"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Medium.ttf",
+      "sha1": "82a7ae9626c22c13919e74e6e6394a6c37513695"
+    },
+    {
+      "path": "src/assets/fonts/Jost-MediumItalic.ttf",
+      "sha1": "89e3eee0bed1c94aa143887b2e447ff93f4f5ab0"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Regular.ttf",
+      "sha1": "fd03d18e64f807a056a6388171c259ec6c3a97bd"
+    },
+    {
+      "path": "src/assets/fonts/Jost-SemiBold.ttf",
+      "sha1": "c35ced7c9fb59a5d1e50abf0a64c526fb1fca21c"
+    },
+    {
+      "path": "src/assets/fonts/Jost-SemiBoldItalic.ttf",
+      "sha1": "1a508a65805c21c29eee660072bc78bf54813059"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Thin.ttf",
+      "sha1": "5335e254a07486908ec3f29a99e8c0054da52d12"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ThinItalic.ttf",
+      "sha1": "d2ecf15872f67a81c7e65db25f8cde8612301c1e"
+    },
+    {
+      "path": "src/assets/fonts/Jost-VariableFont_wght.ttf",
+      "sha1": "2d5d8b369bd6115b24a1d2df8f31b8f3e63fb667"
+    },
+    {
+      "path": "src/assets/fonts/NotoSans-Bold.ttf",
+      "sha1": "00a4dc42180951b52eb9797cb4d6f64527432220"
+    },
+    {
+      "path": "src/assets/fonts/NotoSans-BoldItalic.ttf",
+      "sha1": "831a593460ebf18aab1ecfa6f048930eef5ac94f"
+    },
+    {
+      "path": "src/assets/fonts/NotoSans-Italic.ttf",
+      "sha1": "d6bd88af3739f63a63aebee5dbf5197726760c42"
+    },
+    {
+      "path": "src/assets/fonts/NotoSans-Regular.ttf",
+      "sha1": "2b2500b3269369d0d1a29768aaa869405d4f1575"
+    }
+  ]
+}
