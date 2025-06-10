@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.PRIMARY,
   },
   headerContainer: {
-    height: Platform.OS === 'android' ? Matrics.ms(75) : Matrics.s(35),
+    height: Platform.OS === 'android' ? Matrics.ms(75) : Matrics.s(45),
     width: '100%',
     flexDirection: 'row',
     alignItems: 'flex-center',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: typography.fontSizes.fs18,
     flex: 1,
     textAlign: 'center',
-    alignSelf: 'flex-end',
+    alignSelf: 'center',
     textTransform: 'uppercase',
   },
   rightPlaceholder: {

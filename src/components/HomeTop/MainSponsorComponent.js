@@ -22,11 +22,11 @@ export default MainSponsorComponent;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLOR.PRIMARY,
-    height: Matrics.screenHeight * 0.35,
-    borderBottomLeftRadius: Matrics.ms(56),
+    height: Matrics.screenHeight * 0.3,
+    borderBottomLeftRadius: Matrics.ms(45),
     borderTopWidth: 1,
     borderTopColor: COLOR.WHITE,
-    borderBottomRightRadius: Matrics.ms(56),
+    borderBottomRightRadius: Matrics.ms(45),
     justifyContent: 'center',
     alignItems: 'center',
   },

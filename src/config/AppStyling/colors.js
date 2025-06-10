@@ -1,6 +1,6 @@
 export default {
-  PRIMARY: 'rgb(231, 135, 19)',
-  PRIMARY_LIGHT: 'rgb(239, 148, 52)',
+  PRIMARY: '#0f202a',
+  PRIMARY_LIGHT: '#0f202a',
   SECONDARY: '#32db64',
   DANGER: '#f53d3d',
   LIGHT: '#f4f4f4',

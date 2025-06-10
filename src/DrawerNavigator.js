@@ -11,18 +11,13 @@ import {Images} from './config';
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
-  const {contentPages} = useSelector(state => state.social);
+  const {contentPages, multiplePages} = useSelector(state => state.social);
 
   const renderDrawerScreens = () => {
-    if (!contentPages || Object.keys(contentPages).length === 0) {
-      return null;
-    }
+    if (!contentPages || Object.keys(contentPages).length === 0) return null;
 
     return Object.entries(contentPages).map(([key, page]) => {
-      if (!page.status) {
-        return null;
-      }
-      console.log('page', page);
+      if (!page.status) return null;
 
       return (
         <Drawer.Screen
@@ -34,13 +29,37 @@ export default function DrawerNavigator() {
             title: page.title,
           }}
           options={{
-            drawerIcon: ({focused, color, size}) => (
+            drawerIcon: () => (
               <Image
                 source={{uri: page.icon}}
                 style={{width: 24, height: 24}}
                 resizeMode="contain"
               />
             ),
+          }}
+        />
+      );
+    });
+  };
+
+  const renderMultiplePages = () => {
+    if (!multiplePages) return null;
+
+    return multiplePages.map((page, index) => {
+      if (!page?.url || !page?.name) return null;
+
+      return (
+        <Drawer.Screen
+          key={`multi-${index}`}
+          name={page.name}
+          component={WebViewScreen}
+          initialParams={{
+            url: page.url,
+            title: page.name,
+          }}
+          options={{
+            // Hides from Drawer UI but keeps route available for manual navigation
+            drawerItemStyle: {display: 'none'},
           }}
         />
       );
@@ -82,7 +101,7 @@ export default function DrawerNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
-          drawerIcon: ({focused, color, size}) => (
+          drawerIcon: () => (
             <Image
               source={Images.HOME_ICON}
               style={{width: 24, height: 24}}
@@ -92,6 +111,7 @@ export default function DrawerNavigator() {
         }}
       />
       {renderDrawerScreens()}
+      {renderMultiplePages()}
     </Drawer.Navigator>
   );
 }

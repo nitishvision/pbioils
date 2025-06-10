@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {useSelector} from 'react-redux';
 import {COLOR, Matrics, typography} from '../config/AppStyling';
 
 export default function CustomDrawerContent(props) {
+  const {multiplePages} = useSelector(state => state.social);
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <View style={styles.container}>
       <DrawerContentScrollView
@@ -19,8 +23,37 @@ export default function CustomDrawerContent(props) {
             Permian Basin International Oil Show
           </Text>
         </View>
+
         <View style={styles.drawerItemsContainer}>
           <DrawerItemList {...props} />
+
+          {/* Collapsible Header */}
+          {multiplePages?.length > 0 && (
+            <TouchableOpacity
+              onPress={() => setExpanded(!expanded)}
+              style={styles.dropdownHeader}
+              activeOpacity={0.8}
+              >
+              <Text style={styles.dropdownLabel}>More Pages</Text>
+              <Text style={styles.dropdownArrow}>{expanded ? '▲' : '▼'}</Text>
+            </TouchableOpacity>
+          )}
+
+          {/* Expanded Pages */}
+          {expanded &&
+            multiplePages.map((page, index) => (
+              <TouchableOpacity
+                key={`multi-${index}`}
+                onPress={() => {
+                  props.navigation.navigate(page.name, {
+                    url: page.url,
+                    title: page.name,
+                  });
+                }}
+                style={styles.subItem}>
+                <Text style={styles.subLabel}>{page.name}</Text>
+              </TouchableOpacity>
+            ))}
         </View>
       </DrawerContentScrollView>
     </View>
@@ -60,5 +93,33 @@ const styles = StyleSheet.create({
   drawerItemsContainer: {
     flex: 1,
     paddingTop: 10,
+  },
+  dropdownHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderTopWidth: 1,
+    borderColor: COLOR.LIGHT_GRAY,
+  },
+  dropdownLabel: {
+    fontFamily: typography.fontFamily.Jost.Medium,
+    fontSize: typography.fontSizes.fs16,
+    color: COLOR.TEXT_DARK,
+  },
+  dropdownArrow: {
+    fontSize: 16,
+    color: '#777',
+  },
+  subItem: {
+    paddingLeft: 40,
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  subLabel: {
+    fontFamily: typography.fontFamily.Jost.Medium,
+    fontSize: typography.fontSizes.fs14,
+    color: '#333',
   },
 });

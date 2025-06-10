@@ -16,7 +16,7 @@ export default {
   FOOD_TRUCK: require('../assets/icon/food-truck.png'),
   EXHIBITOR_APPLICATION: require('../assets/icon/exhibitor.png'),
   PROGRAM_GUIDE: require('../assets/icon/guide.png'),
-  HOME_SCREEN: require('../assets/imgs/homeScreenImage.jpg'),
+  HOME_SCREEN: require('../assets/imgs/homeScreenImage.png'),
   PBOIS_ABOUT: require('../assets/imgs/about_pbios.png'),
   HOME_ICON: require('../assets/icon/home.png'),
   INFO_ICON: require('../assets/icon/info-icon.png'),

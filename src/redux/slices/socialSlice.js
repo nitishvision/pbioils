@@ -7,6 +7,8 @@ export const fetchSocialData = createAsyncThunk(
   async (_, {rejectWithValue}) => {
     try {
       const response = await getSocialData();
+      console.log(response);
+
       return response.response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -29,6 +31,7 @@ const initialState = {
   oilField: {},
   aroundus: {},
   contentPages: {},
+  multiplePages: [],
   loading: false,
   error: null,
 };
@@ -59,6 +62,7 @@ const socialSlice = createSlice({
         state.oilField = action.payload.oilField;
         state.aroundus = action.payload.aroundus;
         state.contentPages = action.payload.content_pages;
+        state.multiplePages = action.payload.multiple_pages;
       })
       .addCase(fetchSocialData.rejected, (state, action) => {
         state.loading = false;
