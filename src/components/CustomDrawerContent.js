@@ -16,7 +16,7 @@ export default function CustomDrawerContent(props) {
       <DrawerContentScrollView
         {...props}
         style={{padding: 0, margin: 0}}
-        contentContainerStyle={{padding: 0, margin: 0, flex: 1}}>
+        contentContainerStyle={{padding: 0, margin: 0}}>
         <View style={styles.headerContainer}>
           <Text style={styles.headerText}>Hi...</Text>
           <Text style={styles.subHeaderText}>
@@ -32,8 +32,7 @@ export default function CustomDrawerContent(props) {
             <TouchableOpacity
               onPress={() => setExpanded(!expanded)}
               style={styles.dropdownHeader}
-              activeOpacity={0.8}
-              >
+              activeOpacity={0.8}>
               <Text style={styles.dropdownLabel}>More Pages</Text>
               <Text style={styles.dropdownArrow}>{expanded ? '▲' : '▼'}</Text>
             </TouchableOpacity>

@@ -110,6 +110,11 @@ export default function DrawerNavigator() {
           ),
         }}
       />
+      <Drawer.Screen
+        name={'Sponsor'}
+        component={WebViewScreen}
+        options={{drawerItemStyle: {display: 'none'}}}
+      />
       {renderDrawerScreens()}
       {renderMultiplePages()}
     </Drawer.Navigator>

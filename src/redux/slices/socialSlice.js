@@ -32,6 +32,7 @@ const initialState = {
   aroundus: {},
   contentPages: {},
   multiplePages: [],
+  sponser_details:{},
   loading: false,
   error: null,
 };
@@ -63,6 +64,7 @@ const socialSlice = createSlice({
         state.aroundus = action.payload.aroundus;
         state.contentPages = action.payload.content_pages;
         state.multiplePages = action.payload.multiple_pages;
+        state.sponser_details = action.payload.sponser_details;
       })
       .addCase(fetchSocialData.rejected, (state, action) => {
         state.loading = false;
