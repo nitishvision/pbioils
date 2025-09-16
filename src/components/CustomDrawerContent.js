@@ -40,19 +40,25 @@ export default function CustomDrawerContent(props) {
 
           {/* Expanded Pages */}
           {expanded &&
-            multiplePages.map((page, index) => (
-              <TouchableOpacity
-                key={`multi-${index}`}
-                onPress={() => {
-                  props.navigation.navigate(page.name, {
-                    url: page.url,
-                    title: page.name,
-                  });
-                }}
-                style={styles.subItem}>
-                <Text style={styles.subLabel}>{page.name}</Text>
-              </TouchableOpacity>
-            ))}
+            multiplePages
+              .filter(page => {
+                const url = page?.url?.trim();
+                const name = page?.name?.trim();
+                return !!url && !!name;
+              })
+              .map((page, index) => (
+                <TouchableOpacity
+                  key={`multi-${index}`}
+                  onPress={() => {
+                    props.navigation.navigate(page.name.trim(), {
+                      url: page.url.trim(),
+                      title: page.name.trim(),
+                    });
+                  }}
+                  style={styles.subItem}>
+                  <Text style={styles.subLabel}>{page.name.trim()}</Text>
+                </TouchableOpacity>
+              ))}
         </View>
       </DrawerContentScrollView>
     </View>
